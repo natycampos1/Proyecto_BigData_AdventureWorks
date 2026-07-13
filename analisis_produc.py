@@ -2,13 +2,13 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-# Cargamos tu archivo con sep="\t" para que Pandas reconozca las columnas de AdventureWorks
+
 df = pd.read_csv("Product.csv", sep="\t")
 
-# Limpiamos los nombres de las columnas (quita espacios invisibles rebeldes)
+
 df.columns = df.columns.str.strip()
 
-# Limpiar Standard Cost: quitar "$" y "," y convertir a número (necesario en tus datos)
+
 df["Standard Cost"] = (
     df["Standard Cost"].astype(str).str.replace(r"[\$,]", "", regex=True).astype(float)
 )
@@ -51,7 +51,7 @@ print(df["Category"].value_counts())
 
 df["CostoDistribucion"] = pd.cut(
     df["Standard Cost"],
-    bins=[0, 50, 300, 3000],  # Ajustamos los rangos a los precios de tus productos
+    bins=[0, 50, 300, 3000],  
     labels=["Bajo 50", "Medio 300", "Alto 3000"]
 )
 
@@ -62,7 +62,7 @@ train, test = train_test_split(
     df,
     test_size=0.20,
     random_state=42,
-    stratify=df["Category"]  # Estratificamos por tu columna de categorías
+    stratify=df["Category"] 
 )
 
 
