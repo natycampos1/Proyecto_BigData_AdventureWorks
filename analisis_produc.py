@@ -24,28 +24,28 @@ print(df["Standard Cost"].describe())
 print(df["Category"].value_counts())
 
 
-# plt.hist(df["Standard Cost"], bins=10)
+plt.hist(df["Standard Cost"], bins=10)
 
 
-# plt.title("Distribucion de Standard Cost")
-# plt.xlabel("Standard Cost")
-# plt.ylabel("Cantidad")
-# plt.show()
+plt.title("Distribucion de Standard Cost")
+plt.xlabel("Standard Cost")
+plt.ylabel("Cantidad")
+plt.show()
 
 
 
-# plt.boxplot(df["Standard Cost"])
-# plt.title("boxplot de Standard Cost")
-# plt.show()
+plt.boxplot(df["Standard Cost"])
+plt.title("boxplot de Standard Cost")
+plt.show()
 
 
 
 # NOTA: En la plantilla del profe se cruzan dos columnas numéricas. 
 # En tus datos podemos usar 'Standard Cost' e 'ProductKey' (o el índice) para el scatter plot:
-# plt.scatter(df["Standard Cost"], df.index)
-# plt.xlabel("Indice")
-# plt.ylabel("Standard Cost")
-# plt.show()
+plt.scatter(df["Standard Cost"], df.index)
+plt.xlabel("Indice")
+plt.ylabel("Standard Cost")
+plt.show()
 
 
 
