@@ -40,8 +40,7 @@ plt.show()
 
 
 
-# NOTA: En la plantilla del profe se cruzan dos columnas numéricas. 
-# En tus datos podemos usar 'Standard Cost' e 'ProductKey' (o el índice) para el scatter plot:
+
 plt.scatter(df["Standard Cost"], df.index)
 plt.xlabel("Indice")
 plt.ylabel("Standard Cost")
